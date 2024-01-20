@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Assign values from environment variables to local variables
-FULL_NAME="PLACEHOLDER_FULL_NAME"
-GITHUB_USER="PLACEHOLDER_GITHUB_USER"
-REPO_NAME="PLACEHOLDER_REPO_NAME"
-NODE_VERSION="PLACEHOLDER_NODE"
-NPM_USER="PLACEHOLDER_NPM_USER"
+FULL_NAME="Sebastian Wesolowski"
+GITHUB_USER="SebastianWesolowski"
+REPO_NAME="s-postgres"
+NODE_VERSION="18.17.1"
+NPM_USER="sebastian.wesolowski.sw"
 
 # Use the sed command to edit files
 # Create backup copies of the original files with the .mybak extension

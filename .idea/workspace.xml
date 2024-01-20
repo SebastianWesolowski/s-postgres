@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe4e43c6-098c-4bad-9845-8c2c513c32cc" name="Changes" comment="improve">
-      <change beforePath="$PROJECT_DIR$/.husky/lint-staged.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/lint-staged.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customize.sh" beforeDir="false" afterPath="$PROJECT_DIR$/customize.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +142,7 @@
       <workItem from="1697282171998" duration="394000" />
       <workItem from="1697282811111" duration="3166000" />
       <workItem from="1697370132444" duration="7950000" />
+      <workItem from="1705785602333" duration="217000" />
     </task>
     <task id="LOCAL-00001" summary="improve">
       <option name="closed" value="true" />
