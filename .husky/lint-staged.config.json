@@ -1,0 +1,5 @@
+{
+  "*.{css,scss,sass}": ["npm run staged:style:fix", "git add .", "npm run staged:style:check"],
+  "*.{js,jsx,ts,tsx,json}": ["npm run staged:format:fix", "git add .", "npm run staged:format:check"],
+  "*.{js,jsx,ts,tsx}": ["npm run staged:lint:fix", "git add .", "npm run staged:lint:check"]
+}
