@@ -1,17 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const fs = require("fs");
-
 module.exports = {
   plugins: ["@typescript-eslint", "node", "prettier"],
-  extends: [
-    "prettier",
-    "react-app",
-    "react-app/jest",
-    "plugin:node/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:storybook/recommended",
-    "plugin:tailwindcss/recommended",
-  ],
+  extends: ["prettier", "plugin:node/recommended", "plugin:@typescript-eslint/recommended"],
   rules: {
     "node/no-missing-import": "off",
     "node/no-empty-function": "off",
@@ -41,47 +30,5 @@ module.exports = {
         ignoreDeclarationSort: true,
       },
     ],
-    "tailwindcss/classnames-order": "off",
-    "import/order": [
-      1,
-      {
-        groups: ["external", "builtin", "internal", "sibling", "parent", "index"],
-        pathGroups: [
-          ...getDirectoriesToSort().map((singleDir) => ({
-            pattern: `${singleDir}/**`,
-            group: "internal",
-          })),
-          {
-            pattern: "env",
-            group: "internal",
-          },
-          {
-            pattern: "theme",
-            group: "internal",
-          },
-          {
-            pattern: "public/**",
-            group: "internal",
-            position: "after",
-          },
-        ],
-        pathGroupsExcludedImportTypes: ["internal"],
-        alphabetize: {
-          order: "asc",
-          caseInsensitive: true,
-        },
-      },
-    ],
   },
 };
-
-function getDirectoriesToSort() {
-  const ignoredSortingDirectories = [".git", ".next", ".vscode", "node_modules"];
-  return getDirectories(process.cwd()).filter((f) => !ignoredSortingDirectories.includes(f));
-}
-
-function getDirectories(path) {
-  return fs.readdirSync(path).filter(function (file) {
-    return fs.statSync(path + "/" + file).isDirectory();
-  });
-}

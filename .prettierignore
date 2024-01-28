@@ -43,3 +43,5 @@ storybook-static/**/*
 storybook-static
 cypress.config.js
 cypress/**/*
+prettier.config.js
+.eslintrc.js

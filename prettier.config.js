@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 module.exports = {
   arrowParens: "always",
   endOfLine: "auto",
@@ -8,5 +7,4 @@ module.exports = {
   singleQuote: false,
   trailingComma: "es5",
   useTabs: false,
-  plugins: [require("prettier-plugin-tailwindcss")],
 };
