@@ -4,6 +4,9 @@ Remove after first publish [Set up your repository](docs/HowToAutoDeploy.md)
 
 # s-postgres
 
+set up your postgres url in ENV:
+DATABASE_URL="postgresql://test:test@localhost:5432/mydb?schema=public"
+
 [![npm package][npm-img]][npm-url]
 [![Build Status][build-img]][build-url]
 [![Downloads][downloads-img]][downloads-url]

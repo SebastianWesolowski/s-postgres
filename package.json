@@ -7,6 +7,10 @@
     "lib/**/*"
   ],
   "scripts": {
+    "info": "--------------",
+    "start:dev": "yarn start",
+    "start": "chmod +x ./src/scripts/startDB.sh && ./src/scripts/startDB.sh",
+    "info:end": "--------------",
     "lint:info:start": "Lint-and-Check----------------------------------------------------------------------------------",
     "lint": "run-s format:check lint:parallel",
     "lint:parallel": "run-p lint:check style:check:strict",
@@ -125,5 +129,8 @@
     "commitizen": {
       "path": "git-cz"
     }
+  },
+  "dependencies": {
+    "dotenv-cli": "^7.3.0"
   }
 }
