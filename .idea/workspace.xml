@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe4e43c6-098c-4bad-9845-8c2c513c32cc" name="Changes" comment="improve">
-      <change beforePath="$PROJECT_DIR$/.github/nodejs.version" beforeDir="false" afterPath="$PROJECT_DIR$/.github/nodejs.version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nvmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.nvmrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,52 +65,52 @@
       <recent name="$PROJECT_DIR$/docs" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.style:check">
-    <configuration name="lint:check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.staged:lint:fix">
+    <configuration name="quality:check:type" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="lint:check" />
+        <script value="quality:check:type" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="lint:check:strict" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="staged:format:check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="lint:check:strict" />
+        <script value="staged:format:check" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="staged:format:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="lint:fix" />
+        <script value="staged:format:fix" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="lint:parallel" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="staged:lint:check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="lint:parallel" />
+        <script value="staged:lint:check" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="style:check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="staged:lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="style:check" />
+        <script value="staged:lint:fix" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -121,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.style:check" />
-        <item itemvalue="npm.lint:fix" />
-        <item itemvalue="npm.lint:check:strict" />
-        <item itemvalue="npm.lint:check" />
-        <item itemvalue="npm.lint:parallel" />
+        <item itemvalue="npm.staged:lint:fix" />
+        <item itemvalue="npm.staged:lint:check" />
+        <item itemvalue="npm.staged:format:fix" />
+        <item itemvalue="npm.staged:format:check" />
+        <item itemvalue="npm.quality:check:type" />
       </list>
     </recent_temporary>
   </component>

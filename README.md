@@ -7,16 +7,6 @@ Remove after first publish [Set up your repository](docs/HowToAutoDeploy.md)
 set up your postgres url in ENV:
 DATABASE_URL="postgresql://test:test@localhost:5432/mydb?schema=public"
 
-[![npm package][npm-img]][npm-url]
-[![Build Status][build-img]][build-url]
-[![Downloads][downloads-img]][downloads-url]
-[![Issues][issues-img]][issues-url]
-[![Code Coverage][codecov-img]][codecov-url]
-[![Commitizen Friendly][commitizen-img]][commitizen-url]
-[![Semantic Release][semantic-release-img]][semantic-release-url]
-
-> My awesome module
-
 ## Install
 
 ```bash
