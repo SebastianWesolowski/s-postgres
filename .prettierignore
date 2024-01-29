@@ -45,3 +45,4 @@ cypress.config.js
 cypress/**/*
 prettier.config.js
 .eslintrc.js
+.replacerc.js
