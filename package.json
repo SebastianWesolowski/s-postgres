@@ -1,6 +1,6 @@
 {
   "name": "s-postgres",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A template for creating npm packages using TypeScript",
   "main": "./dist/index.js",
   "files": [

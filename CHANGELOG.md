@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.2...v1.0.3) (2024-01-29)
+
+
+### Bug Fixes
+
+* 🐛 change build process ([61d1b64](https://github.com/SebastianWesolowski/s-postgres/commit/61d1b6431367a5a704823fda32fca043509e68f0))
+
 ## [1.0.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.1...v1.0.2) (2024-01-29)
 
 
