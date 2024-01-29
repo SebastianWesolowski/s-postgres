@@ -6,6 +6,9 @@
   "files": [
     "lib/**/*"
   ],
+  "bin": {
+    "s-postgres": "chmod +x ./lib/startDB.sh && ./lib/startDB.sh"
+  },
   "scripts": {
     "info": "--------------",
     "start:dev": "yarn start",
@@ -24,12 +27,14 @@
     "format:check": "prettier --check \"./**/*.+(js|jsx|ts|tsx|json)\" --ignore-unknown --ignore-path .gitignore",
     "format": "prettier --write \"**/*.{ts,js,tsx,md}\"",
     "lint:info:end": "Lint-End------------------------------------------------------------------------------------------",
-    "build": "tsc --project tsconfig.build.json",
+    "build:copy": "cpy './src/scripts/**/*' './lib/scripts' --parents",
+    "build:replace": "replace-in-files --string='./src/scripts' --replacement='./lib/scripts' ./lib/scripts/startDB.sh",
+    "build": "run-p clean build:copy build:replace",
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "typecheck": "tsc --noEmit",
     "inprogres:start": "--------------",
-    "build:prod": "echo build:prod",
+    "build:prod": "run-p build",
     "inprogres:end": "--------------",
     "GitHook:info:start": "GitHook--------------------------------------------------------------------------------------",
     "husky:prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/git-cz --hook || true",
@@ -72,6 +77,7 @@
   },
   "homepage": "https://github.com/SebastianWesolowski/s-postgres#readme",
   "devDependencies": {
+    "@rollup/plugin-replace": "^5.0.5",
     "@ryansonshine/commitizen": "^4.2.8",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
@@ -80,7 +86,9 @@
     "@typescript-eslint/parser": "^5.54.1",
     "commitizen": "^4.3.0",
     "conventional-changelog-conventionalcommits": "^5.0.0",
+    "cpy-cli": "^5.0.0",
     "cross-env": "^7.0.3",
+    "dotenv-cli": "^7.3.0",
     "eslint": "8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.27.5",
@@ -91,9 +99,9 @@
     "lint-staged": "^13.2.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
+    "replace-in-files-cli": "^2.2.0",
     "semantic-release": "^21.0.1",
     "ts-node": "^10.2.1",
-    "dotenv-cli": "^7.3.0",
     "typescript": "5.2.2"
   },
   "config": {

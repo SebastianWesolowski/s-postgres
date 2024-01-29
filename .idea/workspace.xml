@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fe4e43c6-098c-4bad-9845-8c2c513c32cc" name="Changes" comment="improve">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sebastian/web/s-postgres/packages/config&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sebastian/web/s-postgres/src&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -53,11 +54,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/packages/config" />
       <recent name="$PROJECT_DIR$/packages" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/scripts" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/scripts" />
@@ -65,42 +66,42 @@
       <recent name="$PROJECT_DIR$/docs" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.staged:lint:fix">
-    <configuration name="quality:check:type" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.build:replace">
+    <configuration name="build:copy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="quality:check:type" />
+        <script value="build:copy" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="staged:format:check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="build:prod" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="staged:format:check" />
+        <script value="build:prod" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="staged:format:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="build:replace" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="staged:format:fix" />
+        <script value="build:replace" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="staged:lint:check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="copy:assets" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="staged:lint:check" />
+        <script value="copy:assets" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -118,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build:replace" />
+        <item itemvalue="npm.build:copy" />
+        <item itemvalue="npm.build:prod" />
+        <item itemvalue="npm.copy:assets" />
         <item itemvalue="npm.staged:lint:fix" />
-        <item itemvalue="npm.staged:lint:check" />
-        <item itemvalue="npm.staged:format:fix" />
-        <item itemvalue="npm.staged:format:check" />
-        <item itemvalue="npm.quality:check:type" />
       </list>
     </recent_temporary>
   </component>
@@ -151,6 +152,7 @@
       <workItem from="1706008998648" duration="598000" />
       <workItem from="1706192808918" duration="1526000" />
       <workItem from="1706460794109" duration="174000" />
+      <workItem from="1706553611280" duration="3988000" />
     </task>
     <task id="LOCAL-00001" summary="improve">
       <option name="closed" value="true" />
