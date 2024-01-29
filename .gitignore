@@ -119,4 +119,5 @@ dist
 .pnp.*
 
 # Compiled code
+dist/
 lib/

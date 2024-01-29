@@ -2,8 +2,11 @@ src/types/global.d.ts
 node_modules
 distTS
 lib/*
+dist/*
 *.scss
 .storybook/**
 dist/*
 prettier.config.js
 .eslintrc.js
+.replacerc.js
+
