@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.1...v1.0.2) (2024-01-29)
+
+
+### Bug Fixes
+
+* 🐛 include bin runtime configuration ([93308c7](https://github.com/SebastianWesolowski/s-postgres/commit/93308c75ffa6fa5bd8987362c23556d406bf94a2))
+
 ## [1.0.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.0...v1.0.1) (2024-01-29)
 
 
