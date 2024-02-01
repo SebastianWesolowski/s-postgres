@@ -1,25 +1,39 @@
 const replace = require('replace-in-file');
 
 const envPhase = {
-  files: './dist/scripts/**',
+  files: './dist/**/*',
   from: 'source .env',
   to: 'source ../../.env',
   countMatches: true,
 };
-const envUtil = {
-  files: './dist/scripts/**',
-  from: './src/scripts',
-  to: './dist/scripts',
+const srcPhase = {
+  files: './dist/**/*',
+  from: /\.\/src\//g,
+  to: './dist/',
+  countMatches: true,
+};
+const cwdPhase = {
+  files: './dist/**/*',
+  from: "{ cwd: './' }",
+  to: " {cwd: './node_modules/s-postgres/' }",
   countMatches: true,
 };
 
 replace(envPhase)
   .then((resultsPhase) => {
-    console.log('Replacement envPhase results:', resultsPhase);
-    return replace(envUtil); // Musisz zwrócić obietnicę z replace(envUtil)
+    console.log('Replacement env phase results:', resultsPhase);
+    return replace(srcPhase);
   })
-  .then((resultsUtil) => {
-    console.log('Replacement envUtil results:', resultsUtil);
+  .then((resultsSrcPhase) => {
+    console.log('Replacement src phase results:', resultsSrcPhase);
+    return replace(cwdPhase);
+  })
+  .then((resultsSrcPhase) => {
+    console.log('Replacement src phase results:', resultsSrcPhase);
+    return replace(cwdPhase);
+  })
+  .then((resultsCwdPhase) => {
+    console.log('Replacement cwd phase results:', resultsCwdPhase);
   })
   .catch((error) => {
     console.error('Error occurred:', error);

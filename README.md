@@ -1,59 +1,48 @@
----
-Remove after first publish [Set up your repository](docs/HowToAutoDeploy.md)
----
-
 # s-postgres
 
-set up your postgres url in ENV:
-DATABASE_URL="postgresql://test:test@localhost:5432/mydb?schema=public"
+This NPM package provides a pre-configured Postgres setup for Docker. It allows customization through environment variables. Follow the instructions below to integrate this package into your project.
 
-## Install
+## Installation
+
+To install the package, run the following command:
 
 ```bash
-npm install s-postgres
+yarn add s-postgres
 ```
+
+## Configuration
+
+Create a `.env` file in your project with the following example configuration:
+
+```env
+DATABASE_URL="postgresql://username:password@localhost:5010/mydb?schema=public"
+CONTAINER_NAME="s-postgres"
+```
+
+Adjust the values accordingly based on your requirements. If you do not add your file here, the values presented will be added automatically.
 
 ## Usage
 
-```ts
-import { myPackage } from "s-postgres";
+After installing the package, add the following script to your `package.json` file:
 
-myPackage("hello");
-//=> 'hello from my package'
+```json
+"scripts": {
+  "start": "s-postgres"
+}
 ```
 
-## API
+Now, you can run the package by executing:
 
-### myPackage(input, options?)
+```bash
+yarn start
+```
 
-#### input
+This will initialize the Postgres container with the specified configuration.
 
-Type: `string`
+Make sure to customize the `DATABASE_URL` and `CONTAINER_NAME` variables in your `.env` file to match your project's needs.
 
-Lorem ipsum.
+## Important Note
 
-#### options
+Ensure that Docker is installed and running on your machine before using this package.
 
-Type: `object`
-
-##### postfix
-
-Type: `string`
-Default: `rainbows`
-
-Lorem ipsum.
-
-[build-img]: https://github.com/SebastianWesolowski/s-postgres/actions/workflows/release.yml/badge.svg
-[build-url]: https://github.com/SebastianWesolowski/s-postgres/actions/workflows/release.yml
-[downloads-img]: https://img.shields.io/npm/dt/s-postgres
-[downloads-url]: https://www.npmtrends.com/s-postgres
-[npm-img]: https://img.shields.io/npm/v/s-postgres
-[npm-url]: https://www.npmjs.com/package/s-postgres
-[issues-img]: https://img.shields.io/github/issues/SebastianWesolowski/s-postgres
-[issues-url]: https://github.com/SebastianWesolowski/s-postgres/issues
-[codecov-img]: https://codecov.io/gh/SebastianWesolowski/s-postgres/branch/main/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/SebastianWesolowski/s-postgres
-[semantic-release-img]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
-[semantic-release-url]: https://github.com/semantic-release/semantic-release
-[commitizen-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[commitizen-url]: http://commitizen.github.io/cz-cli/
+Feel free to reach out if you encounter any issues or have further questions.
