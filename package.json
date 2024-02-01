@@ -4,15 +4,20 @@
   "description": "A template for creating npm packages using TypeScript",
   "main": "./dist/index.js",
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "src/**/*"
   ],
   "bin": {
     "startDB": "chmod +x ./dist/startDB.sh && ./dist/startDB.sh",
-    "testDB": "echo testDB"
+    "testDB": "echo testDB",
+    "skryptA": "./bin/index.js",
+    "skryptB": "./src/index.js",
+    "skryptC": "./dist/index.js"
   },
   "scripts": {
     "test": "echo 'Uruchomiono skrypt z paczki A'",
-    "start:dev": "yarn start",
+    "start:dev": "node ./src/index.js",
+    "start:dev:cli": "yarn start",
     "start": "chmod +x ./src/scripts/startDB.sh && ./src/scripts/startDB.sh",
     "info:end": "--------------",
     "lint:info:start": "Lint-and-Check----------------------------------------------------------------------------------",
@@ -28,7 +33,7 @@
     "format:check": "prettier --check \"./**/*.+(js|jsx|ts|tsx|json)\" --ignore-unknown --ignore-path .gitignore",
     "format": "prettier --write \"**/*.{ts,js,tsx,md}\"",
     "lint:info:end": "Lint-End------------------------------------------------------------------------------------------",
-    "build:copy": "cpy './src/scripts/**/*' './dist/scripts' --parents",
+    "build:copy": "cpy './src/**/*' './dist/' --parents",
     "build:replace": "node .replacerc.js",
     "build": "run-s clean build:copy build:replace",
     "build:prod": "run-p build",
@@ -111,5 +116,7 @@
       "path": "git-cz"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "exec-sh": "^0.4.0"
+  }
 }
