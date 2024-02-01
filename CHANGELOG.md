@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.4...v1.1.0) (2024-02-01)
+
+
+### Features
+
+* ✨ add default config ([e06c6a3](https://github.com/SebastianWesolowski/s-postgres/commit/e06c6a3f9f6fbf020bcd558949eb643fdd5ca358))
+
 ## [1.0.4](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.3...v1.0.4) (2024-02-01)
 
 
