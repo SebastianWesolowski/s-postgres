@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.3...v1.0.4) (2024-02-01)
+
+
+### Bug Fixes
+
+* 🐛 start process ([d4d84e7](https://github.com/SebastianWesolowski/s-postgres/commit/d4d84e7ce8f9371c445a4c5c411e38b45aa0f426))
+
 ## [1.0.3](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.2...v1.0.3) (2024-01-29)
 
 
