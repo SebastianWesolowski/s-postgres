@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   postgres:
-    container_name: $DB_CONTAINER_NAME
+    container_name: $CONTAINER_NAME
     build: ./src/scripts
     restart: always
     image: postgres:15

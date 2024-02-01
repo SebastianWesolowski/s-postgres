@@ -4,15 +4,10 @@
   "description": "A template for creating npm packages using TypeScript",
   "main": "./dist/index.js",
   "files": [
-    "dist/**/*",
-    "src/**/*"
+    "dist/**/*"
   ],
   "bin": {
-    "startDB": "chmod +x ./dist/startDB.sh && ./dist/startDB.sh",
-    "testDB": "echo testDB",
-    "skryptA": "./bin/index.js",
-    "skryptB": "./src/index.js",
-    "skryptC": "./dist/index.js"
+    "s-postgres": "./dist/index.js"
   },
   "scripts": {
     "test": "echo 'Uruchomiono skrypt z paczki A'",

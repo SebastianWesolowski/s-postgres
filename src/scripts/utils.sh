@@ -25,3 +25,19 @@ for key, values in query_params.items():
     print(f"{key.upper()}={' '.join(values)}")
 EOF
 }
+
+checkEnvVariable() {
+  local var_name="$1"
+  local default_value="$2"
+
+  if [ -z "${!var_name}" ]; then
+    export "$var_name"="$default_value"
+    echo "Error: Variable $var_name is not set!"
+    echo "Error: The default value will be substituted."
+    echo "Error: $var_name=${!var_name}"
+    echo "Error: If you want to change the default value, add the variable to your .env file."
+  else
+    echo "$var_name=${!var_name}"
+  fi
+}
+
