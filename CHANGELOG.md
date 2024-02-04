@@ -1,3 +1,18 @@
+## [1.1.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.1...v1.1.0-dev.1) (2024-02-04)
+
+
+### Features
+
+* ✨ add default config ([e06c6a3](https://github.com/SebastianWesolowski/s-postgres/commit/e06c6a3f9f6fbf020bcd558949eb643fdd5ca358))
+
+
+### Bug Fixes
+
+* 🐛 change build process ([61d1b64](https://github.com/SebastianWesolowski/s-postgres/commit/61d1b6431367a5a704823fda32fca043509e68f0))
+* 🐛 cleanup ([3389f7c](https://github.com/SebastianWesolowski/s-postgres/commit/3389f7cb40a0ed85610d7c0e0e288313db7eac8e))
+* 🐛 include bin runtime configuration ([93308c7](https://github.com/SebastianWesolowski/s-postgres/commit/93308c75ffa6fa5bd8987362c23556d406bf94a2))
+* 🐛 start process ([d4d84e7](https://github.com/SebastianWesolowski/s-postgres/commit/d4d84e7ce8f9371c445a4c5c411e38b45aa0f426))
+
 ## [1.0.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.0...v1.0.1) (2024-01-29)
 
 ### Bug Fixes
