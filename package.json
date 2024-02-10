@@ -2,12 +2,12 @@
   "name": "s-postgres",
   "version": "1.1.0-dev.1",
   "description": "pre-configured Postgres setup for Docker",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
   "files": [
-    "dist/**/*"
+    "lib/**/*"
   ],
   "bin": {
-    "s-postgres": "./dist/index.js"
+    "s-postgres": "./lib/index.js"
   },
   "scripts": {
     "test": "echo 'Uruchomiono skrypt z paczki A'",
@@ -28,11 +28,11 @@
     "format:check": "prettier --check \"./**/*.+(js|jsx|ts|tsx|json)\" --ignore-unknown --ignore-path .gitignore",
     "format": "prettier --write \"**/*.{ts,js,tsx,md}\"",
     "lint:info:end": "Lint-End------------------------------------------------------------------------------------------",
-    "build:copy": "cpy './src/**/*' './dist/' --parents",
+    "build:copy": "cpy './src/**/*' './lib/' --parents",
     "build:replace": "node .replacerc.js",
     "build": "run-s clean build:copy build:replace",
     "build:prod": "run-p build",
-    "clean": "rm -rf ./dist/",
+    "clean": "rm -rf ./lib/",
     "cm": "cz",
     "typecheck": "tsc --noEmit",
     "inprogres:start": "--------------",

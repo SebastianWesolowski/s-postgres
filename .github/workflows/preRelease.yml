@@ -1,6 +1,6 @@
 # Reusable workflow for releases; to eject, you can replace this file with
 # https://github.com/SebastianWesolowski/SebastianWesolowski/blob/main/.github/workflows/release.yml
-name: Release
+name: Pre Release
 on:
   push:
     branches:
@@ -15,7 +15,7 @@ jobs:
       - run: echo "node_version=$(cat .github/nodejs.version)" >> $GITHUB_ENV
 
       - name: "Setup 🟢Node ${{ env.node_version }}"
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "${{ env.node_version }}"
           cache: 'yarn'

@@ -1,19 +1,19 @@
 const replace = require('replace-in-file');
 
 const envPhase = {
-  files: './dist/**/*',
+  files: './lib/**/*',
   from: 'source .env',
   to: 'source ../../.env',
   countMatches: true,
 };
 const srcPhase = {
-  files: './dist/**/*',
+  files: './lib/**/*',
   from: /\.\/src\//g,
-  to: './dist/',
+  to: './lib/',
   countMatches: true,
 };
 const cwdPhase = {
-  files: './dist/**/*',
+  files: './lib/**/*',
   from: "{ cwd: './' }",
   to: " {cwd: './node_modules/s-postgres/' }",
   countMatches: true,
