@@ -1,3 +1,10 @@
+## [1.1.0-dev.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2024-02-10)
+
+
+### Bug Fixes
+
+* 🐛 fill readme ([79aa32b](https://github.com/SebastianWesolowski/s-postgres/commit/79aa32b07c66fe331e3907f483ec9c74ad1a9a7b))
+
 ## [1.1.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.1...v1.1.0-dev.1) (2024-02-04)
 
 
