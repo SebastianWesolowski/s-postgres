@@ -1,6 +1,6 @@
-# PLACEHOLDER_REPO_NAME
+# s-postgres
 
-<a href="https://github.com/SebastianWesolowski/starter-npm-package"><img align="left" width="440" height="180" alt="PLACEHOLDER_REPO_NAME package" src="srcReadme/heroImageReposytory.png"></a>
+<a href="https://github.com/SebastianWesolowski/starter-npm-package"><img align="left" width="440" height="180" alt="s-postgres package" src="srcReadme/heroImageReposytory.png"></a>
 
 ## Important Links
 
@@ -62,14 +62,14 @@ Feel free to reach out if you encounter any issues or have further questions.
 [![Semantic Release][semantic-release-img]][semantic-release-url]
 
 
-[build-img]: https://github.com/PLACEHOLDER_GITHUB_USER/PLACEHOLDER_REPO_NAME/actions/workflows/release.yml/badge.svg
-[build-url]: https://github.com/PLACEHOLDER_GITHUB_USER/PLACEHOLDER_REPO_NAME/actions/workflows/release.yml
-[downloads-img]: https://img.shields.io/npm/dt/PLACEHOLDER_REPO_NAME
-[downloads-url]: https://www.npmtrends.com/PLACEHOLDER_REPO_NAME
-[npm-img]: https://img.shields.io/npm/v/PLACEHOLDER_REPO_NAME
-[npm-url]: https://www.npmjs.com/package/PLACEHOLDER_REPO_NAME
-[issues-img]: https://img.shields.io/github/issues/PLACEHOLDER_GITHUB_USER/PLACEHOLDER_REPO_NAME
-[issues-url]: https://github.com/PLACEHOLDER_GITHUB_USER/PLACEHOLDER_REPO_NAME/issues
+[build-img]: https://github.com/SebastianWesolowski/s-postgres/actions/workflows/release.yml/badge.svg
+[build-url]: https://github.com/SebastianWesolowski/s-postgres/actions/workflows/release.yml
+[downloads-img]: https://img.shields.io/npm/dt/s-postgres
+[downloads-url]: https://www.npmtrends.com/s-postgres
+[npm-img]: https://img.shields.io/npm/v/s-postgres
+[npm-url]: https://www.npmjs.com/package/s-postgres
+[issues-img]: https://img.shields.io/github/issues/SebastianWesolowski/s-postgres
+[issues-url]: https://github.com/SebastianWesolowski/s-postgres/issues
 [semantic-release-img]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
 [commitizen-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
