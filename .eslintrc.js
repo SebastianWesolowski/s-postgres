@@ -1,6 +1,14 @@
 module.exports = {
   plugins: ['@typescript-eslint', 'node', 'prettier'],
   extends: ['prettier', 'plugin:node/recommended', 'plugin:@typescript-eslint/recommended'],
+  "overrides": [
+    {
+      "files": ["**/*.json"],
+      "rules": {
+        quotes: ['warn', 'double', { avoidEscape: true }],
+      }
+    }
+  ],
   rules: {
     'node/no-missing-import': 'off',
     'node/no-empty-function': 'off',

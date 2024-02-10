@@ -1,7 +1,7 @@
 module.exports = {
   disableEmoji: false,
   format: '{type}{scope}: {emoji}{subject}',
-  list: ['feat', 'fix', 'clean', 'refactor', 'ci', 'config', 'chore', 'docs', 'test', 'breaking'],
+  list: ['feat', 'fix', 'clean', 'refactor', 'release', 'ci', 'config', 'chore', 'docs', 'test', 'breaking'],
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'lerna'],
@@ -44,7 +44,7 @@ module.exports = {
     },
     release: {
       description: 'Create a release commit',
-      emoji: '🚀',
+      emoji: '📦',
       value: 'release',
     },
     test: {
