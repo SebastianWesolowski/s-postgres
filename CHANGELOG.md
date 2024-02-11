@@ -8,6 +8,7 @@
 
 ### Bug Fixes
 
+* 🐛 update prettier dependency ([ba3cab7](https://github.com/SebastianWesolowski/s-postgres/commit/ba3cab788c9820f57fbcf1feb0251a52752ed946))
 * 🐛 cleanup ([3389f7c](https://github.com/SebastianWesolowski/s-postgres/commit/3389f7cb40a0ed85610d7c0e0e288313db7eac8e))
 * 🐛 fill readme ([79aa32b](https://github.com/SebastianWesolowski/s-postgres/commit/79aa32b07c66fe331e3907f483ec9c74ad1a9a7b))
 
