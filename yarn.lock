@@ -5100,6 +5100,11 @@ rxjs@^7.5.5:
   dependencies:
     tslib "^2.1.0"
 
+s-prettier@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/s-prettier/-/s-prettier-1.1.0.tgz#c33b10ca0c2c67cfb68579d5a166475ee892e6b2"
+  integrity sha512-TRRGGp+LvtghqwRPEhmes/6GbYy6KnsITzy1cvicFY07B3zNuGvHiwgpJXnp1kH7OXwOmezBW1Ma8/ZEhLqVmw==
+
 safe-array-concat@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/safe-array-concat/-/safe-array-concat-1.1.0.tgz#8d0cae9cb806d6d1c06e08ab13d847293ebe0692"

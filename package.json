@@ -15,9 +15,8 @@
     "build:copy": "cpy './src/**/*' './lib/' --parents",
     "build:prod": "run-p build",
     "build:replace": "node .replacerc.js",
-    "cm": "cz",
-    "eslint:check": "eslint './src/**/*.+(js|jsx|ts|tsx)'",
-    "eslint:fix": "eslint './src/**/*.+(js|jsx|ts|tsx)' --fix",
+    "eslint:check": "eslint --no-error-on-unmatched-pattern './src/**/*.+(js|jsx|ts|tsx)'",
+    "eslint:fix": "eslint --no-error-on-unmatched-pattern './src/**/*.+(js|jsx|ts|tsx)' --fix",
     "husky:commit-msg": "commitlint --edit $GIT_PARAMS",
     "husky:pre-commit": "lint-staged -c ./.husky/lint-staged.config.json",
     "husky:pre-push": "run-s lint:check build:prod",
@@ -25,15 +24,15 @@
     "lint": "run-s lint:fix lint:check",
     "lint:check": "run-s prettier:check eslint:check",
     "lint:fix": "run-s prettier:fix eslint:fix",
-    "postinstall": "chmod +x ./lib/preparePretierIgnore.sh || true & ./lib/preparePretierIgnore.sh || true",
-    "prepare": "husky install",
     "prettier:check": "prettier --check '**/*.{js,jsx,ts,tsx,json}'",
     "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx,json}'",
     "staged:lint:check": "eslint",
     "staged:lint:fix": "eslint --fix",
     "staged:prettier:check": "prettier --check",
     "staged:prettier:fix": "prettier --write",
-    "start:dev": "node ./src/index.js"
+    "start:dev": "node ./src/index.js",
+    "cm": "cz",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -87,10 +86,12 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
     "replace-in-file": "^7.1.0",
+    "s-prettier": "^1.1.0",
     "semantic-release": "^21.0.1",
     "ts-node": "^10.2.1",
     "typescript": "5.2.2"
   },
+  "prettier": "s-prettier",
   "config": {
     "commitizen": {
       "path": "git-cz"
