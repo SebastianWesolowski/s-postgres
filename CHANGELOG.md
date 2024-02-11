@@ -1,3 +1,10 @@
+## [1.1.0-dev.3](https://github.com/SebastianWesolowski/s-postgres/compare/v1.1.0-dev.2...v1.1.0-dev.3) (2024-02-11)
+
+
+### Features
+
+* ✨ use s-prettier config ([f7d54be](https://github.com/SebastianWesolowski/s-postgres/commit/f7d54be521d3060d8b11be54f1f3f0d1c7391a3b))
+
 ## [1.1.0-dev.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2024-02-10)
 
 
