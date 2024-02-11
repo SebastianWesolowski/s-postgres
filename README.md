@@ -8,6 +8,10 @@
 - [![Build Status][build-img]][build-url]
 - [Author page](PLACEHOLDER_PAGE_AUTHOR)
 
+---
+
+<br/>
+
 This NPM package provides a pre-configured Postgres setup for Docker. It allows customization through environment variables. Follow the instructions below to integrate this package into your project.
 
 ## Installation
