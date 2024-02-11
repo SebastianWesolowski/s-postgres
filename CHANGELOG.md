@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.0...v1.2.1) (2024-02-11)
+
+
+### Bug Fixes
+
+* 🐛 update prettier dependency ([ba3cab7](https://github.com/SebastianWesolowski/s-postgres/commit/ba3cab788c9820f57fbcf1feb0251a52752ed946))
+
 ## [1.2.0](https://github.com/SebastianWesolowski/s-postgres/compare/v1.1.0...v1.2.0) (2024-02-11)
 
 

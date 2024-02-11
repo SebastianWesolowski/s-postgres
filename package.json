@@ -1,6 +1,6 @@
 {
   "name": "s-postgres",
-  "version": "1.2.0-dev.2",
+  "version": "1.2.1",
   "description": "pre-configured Postgres setup for Docker",
   "main": "./lib/index.js",
   "files": [
