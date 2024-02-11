@@ -1,3 +1,16 @@
+## [1.2.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.1.0...v1.2.0-dev.1) (2024-02-11)
+
+
+### Features
+
+* ✨ use s-prettier config ([f7d54be](https://github.com/SebastianWesolowski/s-postgres/commit/f7d54be521d3060d8b11be54f1f3f0d1c7391a3b))
+
+
+### Bug Fixes
+
+* 🐛 cleanup ([3389f7c](https://github.com/SebastianWesolowski/s-postgres/commit/3389f7cb40a0ed85610d7c0e0e288313db7eac8e))
+* 🐛 fill readme ([79aa32b](https://github.com/SebastianWesolowski/s-postgres/commit/79aa32b07c66fe331e3907f483ec9c74ad1a9a7b))
+
 ## [1.1.0](https://github.com/SebastianWesolowski/s-postgres/compare/v1.0.4...v1.1.0) (2024-02-01)
 
 
