@@ -5,8 +5,8 @@ lib/*
 dist/*
 *.scss
 .storybook/**
-dist/*
 prettier.config.js
 .eslintrc.js
 .replacerc.js
-
+.husky/**
+package.json
