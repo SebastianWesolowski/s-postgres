@@ -69,7 +69,6 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
 .env.test
 .env.local
 .env.development.local
@@ -120,6 +119,8 @@ dist
 .pnp.*
 
 # Compiled code
-dist/
 lib/
+
 .idea
+.idea/**
+upload

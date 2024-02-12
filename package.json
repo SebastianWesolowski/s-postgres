@@ -1,6 +1,7 @@
 {
   "name": "s-postgres",
   "version": "1.2.1-dev.1",
+  "version-SNP": "1.0.3",
   "description": "pre-configured Postgres setup for Docker",
   "main": "./lib/index.js",
   "files": [
@@ -15,6 +16,7 @@
     "build:copy": "cpy './src/**/*' './lib/' --parents",
     "build:prod": "run-p build",
     "build:replace": "node .replacerc.js",
+    "build:package": "[ -d ./dist ] || mkdir ./dist && npm pack --pack-destination ./dist &&  tar -xvzf \"$(ls -t ./dist/*.tgz | head -n 1)\" -C ./dist/",
     "eslint:check": "eslint --no-error-on-unmatched-pattern './src/**/*.+(js|jsx|ts|tsx)'",
     "eslint:fix": "eslint --no-error-on-unmatched-pattern './src/**/*.+(js|jsx|ts|tsx)' --fix",
     "husky:commit-msg": "commitlint --edit $GIT_PARAMS",
@@ -32,7 +34,9 @@
     "staged:prettier:fix": "prettier --write",
     "start:dev": "node ./src/index.js",
     "cm": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
   },
   "repository": {
     "type": "git",
@@ -45,13 +49,14 @@
     "url": "https://github.com/SebastianWesolowski"
   },
   "engines": {
-    "node": ">=18.17.1"
+    "node": ">=20.11.0"
   },
   "keywords": [
     "boilerplate",
     "template",
     "typescript",
     "vscode",
+    "jest",
     "husky",
     "commitizen",
     "semantic-release",
@@ -62,7 +67,6 @@
   },
   "homepage": "https://github.com/SebastianWesolowski/s-postgres#readme",
   "devDependencies": {
-    "@rollup/plugin-replace": "^5.0.5",
     "@ryansonshine/commitizen": "^4.2.8",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
@@ -70,6 +74,7 @@
     "@types/node": "^12.20.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "clean-package": "^2.2.0",
     "commitizen": "^4.3.0",
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "cpy-cli": "^5.0.0",
@@ -91,7 +96,6 @@
     "ts-node": "^10.2.1",
     "typescript": "5.2.2"
   },
-  "prettier": "s-prettier",
   "config": {
     "commitizen": {
       "path": "git-cz"

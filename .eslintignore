@@ -2,11 +2,14 @@ src/types/global.d.ts
 node_modules
 distTS
 lib/*
-dist/*
 *.scss
 .storybook/**
+dist/*
+.husky
+.stylelintrc.js
+package.json
+tsconfig.json
 prettier.config.js
 .eslintrc.js
 .replacerc.js
-.husky/**
-package.json
+clean-package.config.json
