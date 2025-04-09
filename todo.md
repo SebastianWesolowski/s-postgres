@@ -1,6 +1,0 @@
-- [ ] add JSCoverage/node-jscoverage
-- [ ] add automation clone .env.example to .env
-- [ ] add eslintcache
-- [ ] .specs -> .test.js
-- [ ] cleanCustomize
-  - fill README.md using varialbes form package.json and customize.json

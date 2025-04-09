@@ -1,47 +1,70 @@
-# {{PLACEHOLDER_REPO_NAME}}
+# s-postgres
 
-<a href="https://github.com/SebastianWesolowski/starter-npm-package"><img align="left" width="440" height="180" alt="{{PLACEHOLDER_REPO_NAME}} package" src=".github/assets/heroImageReposytory-SNP.png"></a>
+<a href="https://github.com/SebastianWesolowski/starter-npm-package"><img align="left" width="440" height="180" alt="s-postgres package" src=".github/assets/heroImageReposytory-SNP.png"></a>
 
 ## Important Links
 
 - [![npm package][npm-img]][npm-url]
 - [![Build Status][build-img]][build-url]
 - [![GitHub Contributors][github-contributors-badge]][github-contributors-badge-link]
-- [Author page]({{PLACEHOLDER_PAGE_AUTHOR}})
+- [Author page](www.wesolowski.dev)
 - [Git Hooks Documentation](.husky/README.md)
 
 <br/><br/>
-
-**Remove before final release**
-
-- [Set up your repository](docs/HowToAutoDeploy.md)
-- [Way to work](docs/WayToWrok.md)
-- [Known issues](docs/knowProblems.md)
 
 ---
 
 <br/>
 
-{{A template for creating ...}}
+This NPM package provides a pre-configured Postgres setup for Docker.
 
-## Install
+This NPM package provides a pre-configured Postgres setup for Docker. It allows customization through environment variables. Follow the instructions below to integrate this package into your project.
+
+## Installation
+
+To install the package, run the following command:
 
 ```bash
-npm install PLACEHOLDER_REPO_NAME
+yarn add s-postgres
 ```
+
+## Configuration
+
+Create a `.env` file in your project with the following example configuration:
+
+```env
+DATABASE_URL="postgresql://username:password@localhost:5010/mydb?schema=public"
+CONTAINER_NAME="s-postgres"
+```
+
+Adjust the values accordingly based on your requirements. If you do not add your file here, the values presented will be added automatically.
 
 ## Usage
 
-```ts
-import { myPackage } from '{{PLACEHOLDER_REPO_NAME}}';
+After installing the package, add the following script to your `package.json` file:
 
-// Default value is 'Watermelon 🍉'
-getFavoriteFruit();
-//=> 'My favorite fruit is Watermelon 🍉'
-
-getFavoriteFruit('Apple 🍎');
-//=> 'My favorite fruit is Apple 🍎'
+```json
+"scripts": {
+  "start": "s-postgres"
+}
 ```
+
+Now, you can run the package by executing:
+
+```bash
+yarn start
+```
+
+This will initialize the Postgres container with the specified configuration.
+
+Make sure to customize the `DATABASE_URL` and `CONTAINER_NAME` variables in your `.env` file to match your project's needs.
+
+## Important Note
+
+Ensure that Docker is installed and running on your machine before using this package.
+
+Feel free to reach out if you encounter any issues or have further questions.
+
 ### Integrated features
 
 Don't worry, with this template you will anyways get all the awesomeness you need:
@@ -61,96 +84,6 @@ Don't worry, with this template you will anyways get all the awesomeness you nee
 - **[Semantic Release](https://github.com/semantic-release/semantic-release)** - for automatic changelog
 - **[Husky](https://typicode.github.io/husky/)** - Git hooks made easy (see [Git Hooks Documentation](.husky/README.md))
 
-## 🎯 Getting Started
-
-To get started with this boilerplate, follow these steps:
-
-1. Install the dependencies:
-
-```bash
-yarn install
-```
-
-2. Run the update witch s-update-manager:
-
-```bash
-yarn s-update-manager
-```
-
-3. Set up your repository
-
-Replace variable in the `./tools/customize/customize.config.ts` script with your own details to personalize your new package:
-
-```bash
-export const config: CustomizeConfig = {
-  replacements: [
-    {
-      placeholder: "{{PLACEHOLDER_FULL_NAME_EXAMPLE}}",
-      value: "Sebastian Wesolowski",
-      files: [
-        "package.json",
-        "README.md",
-        "./docs/HowToAutoDeploy.md",
-        ".github/FUNDING.yml",
-      ],
-    },
-    {
-      placeholder: "{{PLACEHOLDER_PAGE_AUTHOR_EXAMPLE}}",
-      value: "www.wesolowski.dev",
-      files: [".github/FUNDING.yml", "package.json", "LICENSE"],
-    },
-    ...
-```
-
-You can look on example in `./tools/customize/customize.example.config.ts`
-
-Run script with:
-
-```bash
-yarn customize
-```
-
-or
-
-```bash
-tsx tools/customize/customize.ts
-```
-
-4. Optional
-
-- 4.1. Add ngrok token in .env file for local development
-
-  ```bash
-   NGROK_AUTH_TOKEN=your_ngrok_token
-  ```
-
-  after that you can run ngrok to expose your local server to the internet:
-
-  ```bash
-    yarn dev:tunnel
-  ```
-
-  [![ngrok](./.github/assets/ngrok.png)](https://dashboard.ngrok.com/get-started/setup/macos)
-
-5. Run the development server:
-
-```bash
-yarn dev
-```
-
-
-## 🔗 Coupling Graph
-
-The `coupling-graph` script is a useful tool that helps visualize the coupling and connections between your project's internal modules. It's built using the [Madge](https://github.com/pahen/madge) library. To generate the graph, simply run the following command:
-
-```bash
-yarn coupling-graph
-```
-
-This will create a `graph.svg` file, which contains a graphical representation of the connections between your components. You can open the file with any SVG-compatible viewer.
-
-![graph](.github/assets/couplingGraph-node.png)
-
 ## Badges
 
 [![Downloads][downloads-img]][downloads-url]
@@ -159,19 +92,19 @@ This will create a `graph.svg` file, which contains a graphical representation o
 [![Semantic Release][semantic-release-img]][semantic-release-url]
 [![GitHub License][github-license-badge]][github-license-badge-link]
 
-[build-img]: https://github.com/{{PLACEHOLDER_GITHUB_USER}}/{{PLACEHOLDER_REPO_NAME}}/actions/workflows/release.yml/badge.svg
-[build-url]: https://github.com/{{PLACEHOLDER_GITHUB_USER}}/{{PLACEHOLDER_REPO_NAME}}/actions/workflows/release.yml
-[downloads-img]: https://img.shields.io/npm/dt/{{PLACEHOLDER_REPO_NAME}}
-[downloads-url]: https://www.npmtrends.com/{{PLACEHOLDER_REPO_NAME}}
-[npm-img]: https://img.shields.io/npm/v/{{PLACEHOLDER_REPO_NAME}}
-[npm-url]: https://www.npmjs.com/package/{{PLACEHOLDER_REPO_NAME}}
-[issues-img]: https://img.shields.io/github/issues/{{PLACEHOLDER_GITHUB_USER}}/{{PLACEHOLDER_REPO_NAME}}
-[issues-url]: https://github.com/{{PLACEHOLDER_GITHUB_USER}}/{{PLACEHOLDER_REPO_NAME}}/issues
+[build-img]: https://github.com/SebastianWesolowski/s-postgres/actions/workflows/release.yml/badge.svg
+[build-url]: https://github.com/SebastianWesolowski/s-postgres/actions/workflows/release.yml
+[downloads-img]: https://img.shields.io/npm/dt/s-postgres
+[downloads-url]: https://www.npmtrends.com/s-postgres
+[npm-img]: https://img.shields.io/npm/v/s-postgres
+[npm-url]: https://www.npmjs.com/package/s-postgres
+[issues-img]: https://img.shields.io/github/issues/SebastianWesolowski/s-postgres
+[issues-url]: https://github.com/SebastianWesolowski/s-postgres/issues
 [semantic-release-img]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
 [commitizen-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 [commitizen-url]: http://commitizen.github.io/cz-cli/
-[github-license-badge]: https://img.shields.io/github/license/{{PLACEHOLDER_GITHUB_USER}}/{{PLACEHOLDER_REPO_NAME}}
-[github-license-badge-link]: https://github.com/{{PLACEHOLDER_GITHUB_USER}}/{{PLACEHOLDER_REPO_NAME}}/blob/main/LICENSE
-[github-contributors-badge]: https://img.shields.io/github/contributors/{{PLACEHOLDER_GITHUB_USER}}/{{PLACEHOLDER_REPO_NAME}}
-[github-contributors-badge-link]: https://github.com/{{PLACEHOLDER_GITHUB_USER}}/{{PLACEHOLDER_REPO_NAME}}/graphs/contributors
+[github-license-badge]: https://img.shields.io/github/license/SebastianWesolowski/s-postgres
+[github-license-badge-link]: https://github.com/SebastianWesolowski/s-postgres/blob/main/LICENSE
+[github-contributors-badge]: https://img.shields.io/github/contributors/SebastianWesolowski/s-postgres
+[github-contributors-badge-link]: https://github.com/SebastianWesolowski/s-postgres/graphs/contributors

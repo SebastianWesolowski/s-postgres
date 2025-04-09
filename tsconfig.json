@@ -6,7 +6,7 @@
     "target": "ES2022",
     "esModuleInterop": true,
     "declaration": true,
-    "outDir": "xlib",
+    "outDir": "./lib",
     "strict": true,
     "noImplicitAny": false,
     "noUnusedLocals": true,
@@ -28,5 +28,5 @@
     "experimentalSpecifierResolution": "node"
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "@types"],
-  "exclude": ["node_modules", "xlib", "**/*.test.ts"]
+  "exclude": ["node_modules", "lib", "**/*.test.ts"]
 }
