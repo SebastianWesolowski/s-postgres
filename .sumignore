@@ -1,0 +1,17 @@
+src/
+.github/FUNDING.yml
+package.json
+README.md
+./docs/HowToAutoDeploy.md
+LICENSE
+.nvmrc
+tools/addDependency.js
+tools/customize/customize.config.ts
+src/index.ts
+src/test
+src/test/getFavoriteFruit.spec
+src/getFavoriteFruit.ts
+.env.development.example
+.env.local.example
+.env.prod.example
+rollup.config.mjs
