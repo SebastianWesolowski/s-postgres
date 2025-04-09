@@ -1,3 +1,14 @@
+## [1.3.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.1...v1.3.0-dev.1) (April 09, 2025)
+
+
+### Other tasks
+
+- ✨ init SUM ([16f788d](https://github.com/SebastianWesolowski/s-postgres/commit/16f788d5320edab6a4b2463602a5534352075665))
+- 🔧 customize SUM ([e92cdd9](https://github.com/SebastianWesolowski/s-postgres/commit/e92cdd9b184adb0f0c67257a6cf17d4efdac3552))
+- Merge branch 'main' into dev ([4b63272](https://github.com/SebastianWesolowski/s-postgres/commit/4b632723c6f985fe0409b6ba52d0fdcff048d46e))
+- 🔧 Bump [SNP] 1.0.3 ([349ec48](https://github.com/SebastianWesolowski/s-postgres/commit/349ec48551289ecea1108110401c9dff478b01c4))
+- 📦 1.2.1-dev.1 [skip ci] ([d22eead](https://github.com/SebastianWesolowski/s-postgres/commit/d22eeadc5b1ea92d31e0881ae7c658cf3440f584))
+
 ## [1.2.1-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.0...v1.2.1-dev.1) (2024-02-11)
 
 ## [1.2.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.0...v1.2.1) (2024-02-11)
