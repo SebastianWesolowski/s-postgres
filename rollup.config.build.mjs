@@ -6,6 +6,7 @@ export default {
     plugin?.name === 'rpt2'
       ? typescriptPlugin({
           tsconfig: 'tsconfig.build.json',
+          useTsconfigDeclarationDir: true,
         })
       : plugin
   ),

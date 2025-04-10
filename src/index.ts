@@ -1,13 +1,32 @@
 #!/usr/bin/env node
 
-import execSh from 'exec-sh';
+import { parseDatabaseUrl } from './utils/database';
+import { startDockerContainer } from './utils/docker';
+import { checkEnvVariable } from './utils/env';
 
-execSh(
-  'chmod +x ./src/scripts/startDB.sh && ./src/scripts/startDB.sh',
-  { cwd: './' },
-  (error: Error | null, _stdout: string, _stderr: string) => {
-    if (error) {
-      console.log('Exit code: ', (error as Error & { code?: number }).code);
-    }
+// const execAsync = promisify(exec);
+
+async function main() {
+  try {
+    // Sprawdź i ustaw zmienne środowiskowe
+    const databaseUrl = checkEnvVariable('DATABASE_URL', 'postgresql://s:s@localhost:5010/mydb?schema=public');
+
+    const containerName = checkEnvVariable('CONTAINER_NAME', 's-postgres');
+
+    // Parsuj URL bazy danych
+    const dbConfig = parseDatabaseUrl(databaseUrl);
+
+    // Uruchom kontener Docker
+    await startDockerContainer({
+      ...dbConfig,
+      containerName,
+    });
+
+    console.log('Baza danych została uruchomiona pomyślnie');
+  } catch (error) {
+    console.error('Błąd podczas uruchamiania bazy danych:', error);
+    process.exit(1);
   }
-);
+}
+
+main();

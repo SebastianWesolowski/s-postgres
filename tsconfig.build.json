@@ -4,11 +4,13 @@
   "compilerOptions": {
     "types": ["node"],
     "incremental": true,
-    "tsBuildInfoFile": "./tsconfig.tsbuildinfo"
+    "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
+    "outDir": "./lib"
   },
   "include": ["@types", "src/**/*.ts"],
   "exclude": [
     "node_modules/**",
+    "tools/**",
     "tools/**",
     "./eslint.config.mjs",
     "./eslint.config.strict.mjs",

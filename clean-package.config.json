@@ -1,4 +1,22 @@
 {
   "indent": 2,
-  "remove": ["scripts", "keywords", "devDependencies", "config"]
+  "remove": [
+    "scripts",
+    "keywords",
+    "devDependencies",
+    "config",
+    "dependencies.@rollup/plugin-commonjs",
+    "dependencies.@rollup/plugin-json",
+    "dependencies.@rollup/plugin-node-resolve",
+    "dependencies.@rollup/plugin-replace",
+    "dependencies.@rollup/plugin-typescript",
+    "dependencies.@types/node",
+    "dependencies.npm-run-all",
+    "dependencies.rimraf",
+    "dependencies.rollup",
+    "dependencies.rollup-plugin-copy",
+    "dependencies.rollup-plugin-replace",
+    "dependencies.rollup-plugin-typescript2",
+    "dependencies.typescript"
+  ]
 }

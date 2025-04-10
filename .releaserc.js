@@ -69,6 +69,7 @@ const getBranchesConfig = () => {
 
 module.exports = {
   branches: getBranchesConfig(),
+  version: '1.3.0-dev.4',
   plugins: [
     [
       '@semantic-release/commit-analyzer',
@@ -205,6 +206,11 @@ module.exports = {
         prepareCmd: 'echo "Preparing release" && yarn build:prod',
       },
     ],
-    ['@semantic-release/npm', { npmPublish: process.env.NPM_PUBLISH || true }],
+    [
+      '@semantic-release/npm',
+      {
+        npmPublish: process.env.NPM_PUBLISH || true,
+      },
+    ],
   ],
 };
