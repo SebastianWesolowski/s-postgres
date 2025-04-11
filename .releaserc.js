@@ -69,7 +69,6 @@ const getBranchesConfig = () => {
 
 module.exports = {
   branches: getBranchesConfig(),
-  version: '1.3.0-dev.4',
   plugins: [
     [
       '@semantic-release/commit-analyzer',

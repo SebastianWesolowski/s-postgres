@@ -1,19 +1,17 @@
 import { exec } from 'child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { promisify } from 'util';
-import { DatabaseConfig } from './database';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const execAsync = promisify(exec);
 
-interface DockerConfig extends DatabaseConfig {
-  containerName: string;
-}
-
-export async function startDockerContainer(config: DockerConfig) {
+async function startDockerContainer(config) {
   const { username, password, database, port, containerName } = config;
-
-  const dockerComposeCommand = `
-    docker-compose -f ./src/scripts/docker-compose.yaml up -d
-  `;
+  const dockerComposePath = path.resolve(__dirname, 'scripts/docker-compose.yaml');
+  const dockerComposeCommand = `docker-compose -f ${dockerComposePath} up -d`;
 
   // Ustaw zmienne środowiskowe dla docker-compose
   process.env.USERNAME = username;
@@ -28,3 +26,5 @@ export async function startDockerContainer(config: DockerConfig) {
     throw new Error(`Błąd podczas uruchamiania kontenera Docker: ${error}`);
   }
 }
+
+export { startDockerContainer };
