@@ -11,6 +11,7 @@
     "dependencies.@rollup/plugin-replace",
     "dependencies.@rollup/plugin-typescript",
     "dependencies.@types/node",
+    "dependencies.@types/pg",
     "dependencies.npm-run-all",
     "dependencies.rimraf",
     "dependencies.rollup",

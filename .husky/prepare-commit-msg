@@ -85,12 +85,6 @@ if [ "$commit_source" = "commit" ] || [ "$commit_source" = "message" ]; then
     exit 0
 fi
 
-# Skip validation for release commits
-if [[ "$(git log -1 --pretty=%B)" == *"release:"* ]]; then
-    debug "Release commit detected, skipping"
-    exit 0
-fi
-
 # Skip validation for merge commits
 if [[ "$(git log -1 --pretty=%B)" == *"Merge pull request"* ]]; then
     debug "Merge commit detected, skipping"

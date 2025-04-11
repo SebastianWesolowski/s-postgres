@@ -1,17 +1,21 @@
-const fs = require('fs/promises');
-const path = require('path');
+#!/usr/bin/env node
 
-async function preparePackage() {
-  // Wczytaj główny package.json
-  const mainPackage = JSON.parse(await fs.readFile('package.json', 'utf-8'));
+const { writeFile } = require('fs/promises');
+const { join } = require('path');
 
-  const libPackage = { ...mainPackage };
+const libPackageJson = {
+  type: 'module',
+};
 
-  // Dodaj konfigurację ES modules
-  libPackage.type = 'module';
-
-  // Zapisz do lib/package.json
-  await fs.writeFile('lib/package.json', JSON.stringify(libPackage, null, 2));
+async function main() {
+  try {
+    const libPath = join(process.cwd(), 'lib', 'package.json');
+    await writeFile(libPath, JSON.stringify(libPackageJson, null, 2));
+    console.log('Created lib/package.json with type: module');
+  } catch (error) {
+    console.error('Error creating lib/package.json:', error);
+    process.exit(1);
+  }
 }
 
-preparePackage().catch(console.error);
+main();

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { parseDatabaseUrl } from './utils/database';
+import { checkDatabaseExists, parseDatabaseUrl } from './utils/database';
 import { startDockerContainer } from './utils/docker';
 import { checkEnvVariable } from './utils/env';
 
@@ -14,6 +14,12 @@ async function main() {
 
     // Parse database URL
     const dbConfig = parseDatabaseUrl(databaseUrl);
+
+    // Check if database exists
+    const dbExists = await checkDatabaseExists(dbConfig);
+    if (!dbExists) {
+      console.log(`Database ${dbConfig.database} does not exist. Creating...`);
+    }
 
     // Start Docker container
     await startDockerContainer({
