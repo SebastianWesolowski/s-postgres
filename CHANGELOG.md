@@ -1,3 +1,10 @@
+## [1.3.0-dev.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.3.0-dev.1...v1.3.0-dev.2) (April 11, 2025)
+
+
+### Other tasks
+
+- 🐛 precommit ([f6ffe68](https://github.com/SebastianWesolowski/s-postgres/commit/f6ffe6852c3c35d2f657921f71cdaf137c6dff98))
+
 ## [1.3.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.1...v1.3.0-dev.1) (April 11, 2025)
 
 
