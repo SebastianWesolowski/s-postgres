@@ -26,6 +26,8 @@ export function parseDatabaseUrl(urlString: string): DatabaseConfig {
 export async function checkDatabaseExists(dbConfig: DatabaseConfig): Promise<boolean> {
   try {
     const { user, password, host, port, database } = dbConfig;
+
+    // Połączenie do bazy postgres (domyślna baza systemowa)
     const connectionString = `postgresql://${user}:${password}@${host}:${port}/postgres`;
 
     const client = new Client({ connectionString });
@@ -36,7 +38,28 @@ export async function checkDatabaseExists(dbConfig: DatabaseConfig): Promise<boo
     await client.end();
     return (result.rowCount ?? 0) > 0;
   } catch (error) {
+    // Jeśli nie możemy połączyć się z bazą postgres, spróbujmy utworzyć bazę bez sprawdzania
     console.error('Error checking database existence:', error);
+    return false;
+  }
+}
+
+export async function createDatabase(dbConfig: DatabaseConfig): Promise<boolean> {
+  try {
+    const { user, password, host, port, database } = dbConfig;
+
+    // Połączenie do bazy postgres (domyślna baza systemowa)
+    const connectionString = `postgresql://${user}:${password}@${host}:${port}/postgres`;
+
+    const client = new Client({ connectionString });
+    await client.connect();
+
+    await client.query(`CREATE DATABASE "${database}"`);
+
+    await client.end();
+    return true;
+  } catch (error) {
+    console.error('Error creating database:', error);
     return false;
   }
 }
