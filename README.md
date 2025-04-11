@@ -1,16 +1,22 @@
 # s-postgres
 
-<a href="https://github.com/SebastianWesolowski/starter-npm-package"><img align="left" width="440" height="180" alt="s-postgres package" src="srcReadme/heroImageReposytory.png"></a>
+<a href="https://github.com/SebastianWesolowski/starter-npm-package"><img align="left" width="440" height="180" alt="s-postgres package" src=".github/assets/heroImageReposytory-SNP.png"></a>
 
 ## Important Links
 
 - [![npm package][npm-img]][npm-url]
 - [![Build Status][build-img]][build-url]
-- [Author page](PLACEHOLDER_PAGE_AUTHOR)
+- [![GitHub Contributors][github-contributors-badge]][github-contributors-badge-link]
+- [Author page](www.wesolowski.dev)
+- [Git Hooks Documentation](.husky/README.md)
+
+<br/><br/>
 
 ---
 
 <br/>
+
+This NPM package provides a pre-configured Postgres setup for Docker.
 
 This NPM package provides a pre-configured Postgres setup for Docker. It allows customization through environment variables. Follow the instructions below to integrate this package into your project.
 
@@ -59,12 +65,32 @@ Ensure that Docker is installed and running on your machine before using this pa
 
 Feel free to reach out if you encounter any issues or have further questions.
 
+### Integrated features
+
+Don't worry, with this template you will anyways get all the awesomeness you need:
+
+- 📦 **[s-update-manager](https://github.com/SebastianWesolowski/s-update-manager)** - Manage your dependencies with centralized repozystory
+- 🎨 **[s-customize](https://github.com/SebastianWesolowski/s-template/tools/customize)** - Customize your repozytory with one command
+- 🌐 **[ngrok](https://ngrok.com/)** - For local development with remote services
+- ✨ **[ESlint](https://eslint.org/)** and **[Prettier](https://prettier.io/)** - For clean, consistent, and error-free code
+- 🛠️ **[Extremely strict TypeScript](https://www.typescriptlang.org/)** - With [`ts-reset`](https://github.com/total-typescript/ts-reset) library for ultimate type safety
+- 🚀 **[GitHub Actions](https://github.com/features/actions)** - Pre-configured actions for smooth workflows, including Bundle Size and performance stats
+- **[Jest](https://jestjs.io/)** - For rock-solid unit and integration tests
+- **Smoke Testing** and **Acceptance Tests** - For confidence in your deployments
+- **[Conventional commits git hook](https://www.conventionalcommits.org/)** - Keep your commit history neat and tidy
+- **[Absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases)** - No more spaghetti imports
+- **[Patch-package](https://www.npmjs.com/package/patch-package)** - Fix external dependencies without losing your mind
+- **Components coupling and cohesion graph** - A tool for managing component relationships
+- **[Semantic Release](https://github.com/semantic-release/semantic-release)** - for automatic changelog
+- **[Husky](https://typicode.github.io/husky/)** - Git hooks made easy (see [Git Hooks Documentation](.husky/README.md))
+
 ## Badges
+
 [![Downloads][downloads-img]][downloads-url]
 [![Issues][issues-img]][issues-url]
 [![Commitizen Friendly][commitizen-img]][commitizen-url]
 [![Semantic Release][semantic-release-img]][semantic-release-url]
-
+[![GitHub License][github-license-badge]][github-license-badge-link]
 
 [build-img]: https://github.com/SebastianWesolowski/s-postgres/actions/workflows/release.yml/badge.svg
 [build-url]: https://github.com/SebastianWesolowski/s-postgres/actions/workflows/release.yml
@@ -78,3 +104,7 @@ Feel free to reach out if you encounter any issues or have further questions.
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
 [commitizen-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 [commitizen-url]: http://commitizen.github.io/cz-cli/
+[github-license-badge]: https://img.shields.io/github/license/SebastianWesolowski/s-postgres
+[github-license-badge-link]: https://github.com/SebastianWesolowski/s-postgres/blob/main/LICENSE
+[github-contributors-badge]: https://img.shields.io/github/contributors/SebastianWesolowski/s-postgres
+[github-contributors-badge-link]: https://github.com/SebastianWesolowski/s-postgres/graphs/contributors

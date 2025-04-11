@@ -1,3 +1,55 @@
+## [1.3.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.1...v1.3.0-dev.1) (April 11, 2025)
+
+
+### Other tasks
+
+- 🐛 release process ([544479c](https://github.com/SebastianWesolowski/s-postgres/commit/544479ca53994c9bda899e9d79a912a75216436f))
+- 🐛 release process ([fb85ef9](https://github.com/SebastianWesolowski/s-postgres/commit/fb85ef96ab64bfb37e8d8e0d81640c07ecb03209))
+- ✨ bum in ton .5 ([c8f5b8b](https://github.com/SebastianWesolowski/s-postgres/commit/c8f5b8bc5d51fa6af5c9f0114da66d110b836462))
+- ✨ init SUM ([d8f2e83](https://github.com/SebastianWesolowski/s-postgres/commit/d8f2e83f7950d7d58e3edbbd98050d49a06b3d2b))
+- 🔧 customize SUM ([25f6450](https://github.com/SebastianWesolowski/s-postgres/commit/25f64505db0ba4d9b4d2752717472f1f5946533f))
+- Merge pull request #7 from SebastianWesolowski/dev ([180c856](https://github.com/SebastianWesolowski/s-postgres/commit/180c856635bc6e0b27e248ef240fe80e3309e2ad))
+- Merge branch 'main' into dev ([4b63272](https://github.com/SebastianWesolowski/s-postgres/commit/4b632723c6f985fe0409b6ba52d0fdcff048d46e))
+- 🔧 Bump [SNP] 1.0.3 ([349ec48](https://github.com/SebastianWesolowski/s-postgres/commit/349ec48551289ecea1108110401c9dff478b01c4))
+- 📦 1.3.0-dev.1 [skip ci] ([946d032](https://github.com/SebastianWesolowski/s-postgres/commit/946d032d24f63baa3802a399a201543d49a60d1e))
+- 📦 1.3.0-dev.2 [skip ci] ([9fa192c](https://github.com/SebastianWesolowski/s-postgres/commit/9fa192cab7f364978c80d3d31b0228779352e593))
+- 📦 1.3.0-dev.1 [skip ci] ([7e4b81c](https://github.com/SebastianWesolowski/s-postgres/commit/7e4b81c07ecf554583c61aa0d768ce006c9e1eca))
+- 📦 1.2.1-dev.1 [skip ci] ([d22eead](https://github.com/SebastianWesolowski/s-postgres/commit/d22eeadc5b1ea92d31e0881ae7c658cf3440f584))
+
+## [1.3.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.1...v1.3.0-dev.1) (April 11, 2025)
+
+
+### Other tasks
+
+- 🐛 release process ([544479c](https://github.com/SebastianWesolowski/s-postgres/commit/544479ca53994c9bda899e9d79a912a75216436f))
+- 🐛 release process ([fb85ef9](https://github.com/SebastianWesolowski/s-postgres/commit/fb85ef96ab64bfb37e8d8e0d81640c07ecb03209))
+- ✨ init SUM ([d8f2e83](https://github.com/SebastianWesolowski/s-postgres/commit/d8f2e83f7950d7d58e3edbbd98050d49a06b3d2b))
+- 🔧 customize SUM ([25f6450](https://github.com/SebastianWesolowski/s-postgres/commit/25f64505db0ba4d9b4d2752717472f1f5946533f))
+- Merge pull request #7 from SebastianWesolowski/dev ([180c856](https://github.com/SebastianWesolowski/s-postgres/commit/180c856635bc6e0b27e248ef240fe80e3309e2ad))
+- Merge branch 'main' into dev ([4b63272](https://github.com/SebastianWesolowski/s-postgres/commit/4b632723c6f985fe0409b6ba52d0fdcff048d46e))
+- 🔧 Bump [SNP] 1.0.3 ([349ec48](https://github.com/SebastianWesolowski/s-postgres/commit/349ec48551289ecea1108110401c9dff478b01c4))
+- 📦 1.3.0-dev.2 [skip ci] ([9fa192c](https://github.com/SebastianWesolowski/s-postgres/commit/9fa192cab7f364978c80d3d31b0228779352e593))
+- 📦 1.3.0-dev.1 [skip ci] ([7e4b81c](https://github.com/SebastianWesolowski/s-postgres/commit/7e4b81c07ecf554583c61aa0d768ce006c9e1eca))
+- 📦 1.2.1-dev.1 [skip ci] ([d22eead](https://github.com/SebastianWesolowski/s-postgres/commit/d22eeadc5b1ea92d31e0881ae7c658cf3440f584))
+
+## [1.3.0-dev.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.3.0-dev.1...v1.3.0-dev.2) (April 10, 2025)
+
+
+### Other tasks
+
+- 🐛 release process ([e326415](https://github.com/SebastianWesolowski/s-postgres/commit/e326415479257a2edfb1febf4132fc1e3353fec9))
+
+## [1.3.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.1...v1.3.0-dev.1) (April 09, 2025)
+
+
+### Other tasks
+
+- ✨ init SUM ([16f788d](https://github.com/SebastianWesolowski/s-postgres/commit/16f788d5320edab6a4b2463602a5534352075665))
+- 🔧 customize SUM ([e92cdd9](https://github.com/SebastianWesolowski/s-postgres/commit/e92cdd9b184adb0f0c67257a6cf17d4efdac3552))
+- Merge branch 'main' into dev ([4b63272](https://github.com/SebastianWesolowski/s-postgres/commit/4b632723c6f985fe0409b6ba52d0fdcff048d46e))
+- 🔧 Bump [SNP] 1.0.3 ([349ec48](https://github.com/SebastianWesolowski/s-postgres/commit/349ec48551289ecea1108110401c9dff478b01c4))
+- 📦 1.2.1-dev.1 [skip ci] ([d22eead](https://github.com/SebastianWesolowski/s-postgres/commit/d22eeadc5b1ea92d31e0881ae7c658cf3440f584))
+
 ## [1.2.1-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.0...v1.2.1-dev.1) (2024-02-11)
 
 ## [1.2.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.0...v1.2.1) (2024-02-11)
