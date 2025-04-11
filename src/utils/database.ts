@@ -10,6 +10,12 @@ export interface DatabaseConfig {
   schema?: string;
 }
 
+/**
+ * Parses database URL to a configuration object.
+ *
+ * @param databaseUrl - Database URL in the format postgresql://user:password@host:port/database?schema=schema
+ * @returns Database configuration object
+ */
 export function parseDatabaseUrl(urlString: string): DatabaseConfig {
   const url = new URL(urlString);
 
@@ -23,11 +29,17 @@ export function parseDatabaseUrl(urlString: string): DatabaseConfig {
   };
 }
 
+/**
+ * Checks if a database with the given name exists.
+ *
+ * @param dbConfig - Database configuration
+ * @returns Promise<boolean> - true if the database exists, false otherwise
+ */
 export async function checkDatabaseExists(dbConfig: DatabaseConfig): Promise<boolean> {
   try {
     const { user, password, host, port, database } = dbConfig;
 
-    // Połączenie do bazy postgres (domyślna baza systemowa)
+    // Connect to the postgres database (default system database)
     const connectionString = `postgresql://${user}:${password}@${host}:${port}/postgres`;
 
     const client = new Client({ connectionString });
@@ -38,17 +50,23 @@ export async function checkDatabaseExists(dbConfig: DatabaseConfig): Promise<boo
     await client.end();
     return (result.rowCount ?? 0) > 0;
   } catch (error) {
-    // Jeśli nie możemy połączyć się z bazą postgres, spróbujmy utworzyć bazę bez sprawdzania
+    // If we can't connect to the postgres database, let's try to create the database without checking
     console.error('Error checking database existence:', error);
     return false;
   }
 }
 
+/**
+ * Creates a database with the given name.
+ *
+ * @param dbConfig - Database configuration
+ * @returns Promise<boolean> - true if the database was created, false in case of an error
+ */
 export async function createDatabase(dbConfig: DatabaseConfig): Promise<boolean> {
   try {
     const { user, password, host, port, database } = dbConfig;
 
-    // Połączenie do bazy postgres (domyślna baza systemowa)
+    // Connect to the postgres database (default system database)
     const connectionString = `postgresql://${user}:${password}@${host}:${port}/postgres`;
 
     const client = new Client({ connectionString });

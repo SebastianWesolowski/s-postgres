@@ -6,21 +6,31 @@ import { checkEnvVariable } from './utils/env';
 
 // const execAsync = promisify(exec);
 
+/**
+ * Main function of the s-postgres package.
+ *
+ * Performs the following operations:
+ * 1. Gets configuration from environment variables
+ * 2. Starts a Docker container with PostgreSQL
+ * 3. Waits for the database to start
+ * 4. Checks if the target database exists
+ * 5. Creates the database if it doesn't exist
+ */
 async function main() {
   try {
-    // Pobierz dane z DATABASE_URL lub z indywidualnych zmiennych
+    // Get data from DATABASE_URL or from individual variables
     let dbConfig;
 
     if (process.env.DATABASE_URL) {
-      const databaseUrl = checkEnvVariable('DATABASE_URL', 'postgresql://s:s@localhost:5010/mydb?schema=public');
+      const databaseUrl = checkEnvVariable('DATABASE_URL', 'postgresql://test:test@localhost:5432/mydb');
       dbConfig = parseDatabaseUrl(databaseUrl);
     } else {
-      // Użyj indywidualnych zmiennych środowiskowych
+      // Use individual environment variables
       dbConfig = {
-        user: checkEnvVariable('DATABASE_USER', 's'),
-        password: checkEnvVariable('DATABASE_PASSWORD', 's'),
+        user: checkEnvVariable('DATABASE_USER', 'test'),
+        password: checkEnvVariable('DATABASE_PASSWORD', 'test'),
         host: checkEnvVariable('DATABASE_HOST', 'localhost'),
-        port: checkEnvVariable('DATABASE_PORT', '5010'),
+        port: checkEnvVariable('DATABASE_PORT', '5432'),
         database: checkEnvVariable('DATABASE_NAME', 'mydb'),
         schema: 'public',
       };

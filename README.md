@@ -1,6 +1,66 @@
 # s-postgres
 
-<a href="https://github.com/SebastianWesolowski/starter-npm-package"><img align="left" width="440" height="180" alt="s-postgres package" src=".github/assets/heroImageReposytory-SNP.png"></a>
+<a href="https://github.com/SebastianWesolowski/starter-npm-package"><img
+align="left" width="440" height="180" alt="s-postgres package" src=".github/
+assets/heroImageReposytory-SNP.png"></a>
+
+Simple tool for running PostgreSQL in a Docker container.
+
+## Installation
+
+```bash
+npm install s-postgres
+```
+
+## Usage
+
+The tool can be used in two ways:
+
+### 1. Using the DATABASE_URL variable
+
+```bash
+DATABASE_URL=postgresql://test:test@localhost:5432/mydb CONTAINER_NAME=s-postgres-mydb npx s-postgres
+```
+
+### 2. Using individual environment variables
+
+```bash
+DATABASE_USER=test \
+DATABASE_PASSWORD=test \
+DATABASE_HOST=localhost \
+DATABASE_PORT=5432 \
+DATABASE_NAME=mydb \
+CONTAINER_NAME=s-postgres-mydb \
+npx s-postgres
+```
+
+## Environment Variables
+
+The tool uses the following environment variables:
+
+| Variable          | Description           | Default value                              |
+| ----------------- | --------------------- | ------------------------------------------ |
+| DATABASE_URL      | Full database URL     | postgresql://test:test@localhost:5432/mydb |
+| DATABASE_USER     | Database username     | test                                       |
+| DATABASE_PASSWORD | Database password     | test                                       |
+| DATABASE_HOST     | Database host         | localhost                                  |
+| DATABASE_PORT     | Database port         | 5432                                       |
+| DATABASE_NAME     | Database name         | mydb                                       |
+| CONTAINER_NAME    | Docker container name | s-postgres                                 |
+
+## Features
+
+The tool:
+
+1. Starts a Docker container with PostgreSQL
+2. Waits for the server to start
+3. Checks if the database exists
+4. Creates the database if it doesn't exist
+5. Reports success
+
+## Example .env file
+
+You can use an `.env` file containing the required environment variables in your project. An example file is available in the repository as `.env.example`.
 
 ## Important Links
 
@@ -33,7 +93,7 @@ yarn add s-postgres
 Create a `.env` file in your project with the following example configuration:
 
 ```env
-DATABASE_URL="postgresql://username:password@localhost:5010/mydb?schema=public"
+DATABASE_URL="postgresql://test:test@localhost:5432/mydb"
 CONTAINER_NAME="s-postgres"
 ```
 
