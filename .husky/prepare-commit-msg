@@ -10,7 +10,6 @@ debug() {
     fi
 }
 
-
 debug "Starting prepare-commit-msg hook"
 
 
@@ -83,6 +82,12 @@ if [ "$commit_source" = "commit" ] || [ "$commit_source" = "message" ]; then
     echo "[🐶 Husky] ⏭️ Amend commit detected. Skipping prepare-commit-msg script."
     echo "[🐶 Husky] Done ✅ prepare-commit-msg hook..."
     exit 0
+fi
+
+if [ -s "$commit_msg_file" ] && [ -n "$commit_source" ] && grep -v '^#' "$commit_msg_file" | grep -q "\[skip ci\]"; then
+  debug "Skip CI detected, skipping"
+  echo "[🐶 Husky] ⏭️ [skip ci] detected. Skipping prepare-commit-msg script."
+  exit 0
 fi
 
 # Skip validation for merge commits
