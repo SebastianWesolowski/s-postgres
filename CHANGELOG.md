@@ -1,3 +1,11 @@
+## [1.4.0-dev.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.4.0-dev.1...v1.4.0-dev.2) (April 11, 2025)
+
+
+### Other tasks
+
+- 🐛 release process ([1efb7e8](https://github.com/SebastianWesolowski/s-postgres/commit/1efb7e8d50ab01e7e66e10b3fa28f07a6e7414a1))
+- ✨ check base is exist ([75f2501](https://github.com/SebastianWesolowski/s-postgres/commit/75f2501724e94adf614b86822eb5f8396bfaa08f))
+
 ## [1.4.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.3.0...v1.4.0-dev.1) (April 11, 2025)
 
 
