@@ -1,3 +1,12 @@
+## [1.3.0-dev.3](https://github.com/SebastianWesolowski/s-postgres/compare/v1.3.0-dev.2...v1.3.0-dev.3) (April 11, 2025)
+
+
+### Other tasks
+
+- 🐛 remove unused functions about package.json ([7bddadf](https://github.com/SebastianWesolowski/s-postgres/commit/7bddadf62b57b28b5053d4d5c9cba2807841877c))
+- -d dodaj nową funkcjonalność ([23e023b](https://github.com/SebastianWesolowski/s-postgres/commit/23e023bcdd7de416f1d7805082f5c84e631c863e))
+- 📦 1.3.0 [skip ci] ([6dd56b6](https://github.com/SebastianWesolowski/s-postgres/commit/6dd56b687918ea5d3583fb517bcd75b393acdab5))
+
 ## [1.3.0](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.1...v1.3.0) (April 11, 2025)
 
 
