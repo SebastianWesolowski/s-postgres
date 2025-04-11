@@ -1,3 +1,10 @@
+## [1.4.0-dev.3](https://github.com/SebastianWesolowski/s-postgres/compare/v1.4.0-dev.2...v1.4.0-dev.3) (April 11, 2025)
+
+
+### Other tasks
+
+- 🐛 process check db ([ad04701](https://github.com/SebastianWesolowski/s-postgres/commit/ad04701beb8d1a85cea818656df785bff2c87c20))
+
 ## [1.4.0-dev.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.4.0-dev.1...v1.4.0-dev.2) (April 11, 2025)
 
 
