@@ -13,7 +13,7 @@ async function startDockerContainer(config) {
   const dockerComposePath = path.resolve(__dirname, 'scripts/docker-compose.yaml');
   const dockerComposeCommand = `docker-compose -f ${dockerComposePath} up -d`;
 
-  // Ustaw zmienne środowiskowe dla docker-compose
+  // Set environment variables for docker-compose
   process.env.USERNAME = username;
   process.env.PASSWORD = password;
   process.env.DATABASE = database;
@@ -23,7 +23,7 @@ async function startDockerContainer(config) {
   try {
     await execAsync(dockerComposeCommand);
   } catch (error) {
-    throw new Error(`Błąd podczas uruchamiania kontenera Docker: ${error}`);
+    throw new Error(`Error while starting Docker container: ${error}`);
   }
 }
 

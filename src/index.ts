@@ -8,23 +8,22 @@ import { checkEnvVariable } from './utils/env';
 
 async function main() {
   try {
-    // Sprawdź i ustaw zmienne środowiskowe
+    // Check and set environment variables
     const databaseUrl = checkEnvVariable('DATABASE_URL', 'postgresql://s:s@localhost:5010/mydb?schema=public');
-
     const containerName = checkEnvVariable('CONTAINER_NAME', 's-postgres');
 
-    // Parsuj URL bazy danych
+    // Parse database URL
     const dbConfig = parseDatabaseUrl(databaseUrl);
 
-    // Uruchom kontener Docker
+    // Start Docker container
     await startDockerContainer({
       ...dbConfig,
       containerName,
     });
 
-    console.log('Baza danych została uruchomiona pomyślnie');
+    console.log('Database started successfully');
   } catch (error) {
-    console.error('Błąd podczas uruchamiania bazy danych:', error);
+    console.error('Error while starting the database:', error);
     process.exit(1);
   }
 }
