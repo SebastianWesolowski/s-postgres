@@ -1,3 +1,10 @@
+## [1.4.0-dev.4](https://github.com/SebastianWesolowski/s-postgres/compare/v1.4.0-dev.3...v1.4.0-dev.4) (April 11, 2025)
+
+
+### Other tasks
+
+- ✨ improve documentation ([49c8a47](https://github.com/SebastianWesolowski/s-postgres/commit/49c8a471efa24b407801bf20bdeb50a6764c9332))
+
 ## [1.4.0-dev.3](https://github.com/SebastianWesolowski/s-postgres/compare/v1.4.0-dev.2...v1.4.0-dev.3) (April 11, 2025)
 
 
