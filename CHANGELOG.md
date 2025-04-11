@@ -1,3 +1,20 @@
+## [1.3.0-dev.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.3.0-dev.1...v1.3.0-dev.2) (April 11, 2025)
+
+
+### Other tasks
+
+- 🐛 precommit ([eb78515](https://github.com/SebastianWesolowski/s-postgres/commit/eb78515ddb52bfa0749c01cda98e71d97f57dc6e))
+- prepare commit ([7d72025](https://github.com/SebastianWesolowski/s-postgres/commit/7d72025041fd2b942929d350b3cc15d2e4283248))
+- Merge pull request #8 from SebastianWesolowski/dev ([ad148b2](https://github.com/SebastianWesolowski/s-postgres/commit/ad148b291436867316cb492bb484f87b0e0f5a22))
+- 📦 1.3.0-dev.2 [skip ci] ([bca0bf9](https://github.com/SebastianWesolowski/s-postgres/commit/bca0bf91516695f5946f16c7490dd82a644381e0))
+
+## [1.3.0-dev.2](https://github.com/SebastianWesolowski/s-postgres/compare/v1.3.0-dev.1...v1.3.0-dev.2) (April 11, 2025)
+
+
+### Other tasks
+
+- 🐛 precommit ([f6ffe68](https://github.com/SebastianWesolowski/s-postgres/commit/f6ffe6852c3c35d2f657921f71cdaf137c6dff98))
+
 ## [1.3.0-dev.1](https://github.com/SebastianWesolowski/s-postgres/compare/v1.2.1...v1.3.0-dev.1) (April 11, 2025)
 
 
