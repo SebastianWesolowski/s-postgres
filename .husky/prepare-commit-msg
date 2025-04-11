@@ -58,6 +58,16 @@ if [ "$commit_source" = "commit" ] || [ "$commit_source" = "message" ]; then
     exit 0
 fi
 
+# Skip validation for release commits
+if [[ "$(git log -1 --pretty=%B)" == *"release:"* ]]; then
+  exit 0
+fi
+
+# Skip validation for merge commits
+if [[ "$(git log -1 --pretty=%B)" == *"Merge pull request"* ]]; then
+  exit 0
+fi
+
 # Run commitlint
 commitlint_output=$(yarn commitlint --edit "$commit_msg_file" 2>&1)
 commitlint_exit_code=$?
