@@ -1,21 +1,32 @@
 echo "[🐶 Husky] Running prepare-commit-msg hook..."
-echo "DEBUG: Starting prepare-commit-msg hook"
 
 commit_msg_file="$1"
 commit_source="$2"
-echo "DEBUG: commit_msg_file=$commit_msg_file, commit_source=$commit_source"
+# Funkcja do debugowania
+debug() {
+    local commit_msg=$(cat "$commit_msg_file")
+    if [[ "$commit_msg" == *"-d"* ]]; then
+        echo "DEBUG: $1"
+    fi
+}
+
+
+debug "Starting prepare-commit-msg hook"
+
+
+debug "commit_msg_file=$commit_msg_file, commit_source=$commit_source"
 
 # Extract emoji from commit message
 get_emoji() {
     local emoji=$([[ $1 =~ [✨🐛📚️💄♻️⚡🚨📦🎡🔧⏪] ]] && echo "${BASH_REMATCH[0]}")
-    echo "DEBUG: Extracted emoji: $emoji"
+    debug "Extracted emoji: $emoji"
     echo "$emoji"
 }
 
 # Extract issue number from commit message
 get_issue_number() {
     local issue=$(echo "$1" | grep -oE "SC-[0-9]+" | head -n1)
-    echo "DEBUG: Extracted issue number: ${issue:-NO-TICKET}"
+    debug "Extracted issue number: ${issue:-NO-TICKET}"
     echo "${issue:-NO-TICKET}"
 }
 
@@ -24,13 +35,13 @@ get_commit_message() {
     local commit_msg="$1"
     local used_emoji="$2"
     local issue_number="$3"
-    echo "DEBUG: Processing commit message: $commit_msg"
-    echo "DEBUG: With emoji: $used_emoji"
-    echo "DEBUG: With issue: $issue_number"
+    debug "Processing commit message: $commit_msg"
+    debug "With emoji: $used_emoji"
+    debug "With issue: $issue_number"
 
     local content=$(echo "$commit_msg" | sed -E 's/^[^:]+: *//; s/^[[:space:]]*'"$used_emoji"'[[:space:]]*//' |
         sed -E 's/[[:space:]]*'"$issue_number"'[[:space:]]*//')
-    echo "DEBUG: Extracted content: $content"
+    debug "Extracted content: $content"
     echo "$content"
 }
 
@@ -38,7 +49,7 @@ get_commit_message() {
 get_commit_type() {
     local commit_type=$(echo "$1" | sed -nE 's/^([a-z]+):.*/\1/p')
     local valid_types="feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert"
-    echo "DEBUG: Extracted commit type: $commit_type"
+    debug "Extracted commit type: $commit_type"
     [[ -n "$commit_type" && "$commit_type" =~ ^($valid_types)$ ]] && echo "$commit_type" || echo ""
 }
 
@@ -50,11 +61,11 @@ update_commit_message() {
     local commit_content="$4"
     local commit_msg_file="$5"
 
-    echo "DEBUG: Updating commit message with:"
-    echo "DEBUG: type=$commit_type"
-    echo "DEBUG: emoji=$emoji"
-    echo "DEBUG: issue=$issue_number"
-    echo "DEBUG: content=$commit_content"
+    debug "Updating commit message with:"
+    debug "type=$commit_type"
+    debug "emoji=$emoji"
+    debug "issue=$issue_number"
+    debug "content=$commit_content"
 
     if [ "$issue_number" = "NO-TICKET" ]; then
         echo "$commit_type: $emoji $commit_content" > "$commit_msg_file"
@@ -62,12 +73,13 @@ update_commit_message() {
         echo "$commit_type: $emoji [$issue_number] $commit_content" > "$commit_msg_file"
     fi
     sed -i.bak '/^$/d' "$commit_msg_file" && rm "${commit_msg_file}.bak"
-    echo "DEBUG: Final commit message: $(cat $commit_msg_file)"
+    debug "Final commit message: $(cat $commit_msg_file)"
 }
+
 
 # Skip processing for amend commits
 if [ "$commit_source" = "commit" ] || [ "$commit_source" = "message" ]; then
-    echo "DEBUG: Amend commit detected, skipping"
+    debug "Amend commit detected, skipping"
     echo "[🐶 Husky] ⏭️ Amend commit detected. Skipping prepare-commit-msg script."
     echo "[🐶 Husky] Done ✅ prepare-commit-msg hook..."
     exit 0
@@ -75,35 +87,35 @@ fi
 
 # Skip validation for release commits
 if [[ "$(git log -1 --pretty=%B)" == *"release:"* ]]; then
-    echo "DEBUG: Release commit detected, skipping"
+    debug "Release commit detected, skipping"
     exit 0
 fi
 
 # Skip validation for merge commits
 if [[ "$(git log -1 --pretty=%B)" == *"Merge pull request"* ]]; then
-    echo "DEBUG: Merge commit detected, skipping"
+    debug "Merge commit detected, skipping"
     exit 0
 fi
 
 # Run commitlint
-echo "DEBUG: Running commitlint"
+debug "Running commitlint"
 commitlint_output=$(yarn commitlint --edit "$commit_msg_file" 2>&1)
 commitlint_exit_code=$?
-echo "DEBUG: Commitlint exit code: $commitlint_exit_code"
+debug "Commitlint exit code: $commitlint_exit_code"
 
 if [ "$commitlint_exit_code" -ne 1 ]; then
-    echo "DEBUG: Commitlint failed, starting wizard"
+    debug "Commitlint failed, starting wizard"
     echo "[🐶 Husky] Commitlint failed. Starting wizard commit message."
     yarn husky:prepare-commit-msg
 else
-    echo "DEBUG: Commitlint passed"
+    debug "Commitlint passed"
     echo "[🐶 Husky] Commitlint passed. Proceeding with the commit."
 fi
 
 format_commit_message() {
-    echo "DEBUG: Starting format_commit_message"
+    debug "Starting format_commit_message"
     commit_msg=$(cat "$commit_msg_file")
-    echo "DEBUG: Original commit message: $commit_msg"
+    debug "Original commit message: $commit_msg"
     emoji=$(get_emoji "$commit_msg")
     commit_type=$(get_commit_type "$commit_msg")
     issue_number=$(get_issue_number "$commit_msg")
@@ -112,5 +124,12 @@ format_commit_message() {
 }
 
 format_commit_message
-echo "DEBUG: Finished processing"
+debug "Finished processing"
+debug "Final commit message: $(cat $commit_msg_file)"
+
+if [[ "$(cat $commit_msg_file)" == *"-d"* ]]; then
+    echo "DEBUG: Debug mode enabled - commit will not be created"
+    exit 1
+fi
+
 echo "[🐶 Husky] Done ✅ prepare-commit-msg hook..."
